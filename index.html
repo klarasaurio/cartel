@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartel sincronicidad</title>
+    <style>
+        @font-face {
+            font-family:eternal ;
+            src: url("fuente/eternal.otf");
+        }
+
+        @keyframes mymove1 {
+            from {top: -1000px;}
+            to {top: 47px;}
+        }
+
+        @keyframes mymove1b {
+            from {top: 47px;}
+            to {top: -1000px;}
+        }
+
+        @keyframes mymove2 {
+            from {top: -600px;}
+            to {top: 213px;}
+        }
+
+        @keyframes mymove2b {
+            to {top: -600px;}
+            from {top: 213px;}
+        }
+
+        @keyframes mymove3 {
+            from {top: -400px;}
+            to {top: 370px;}
+        }
+
+        @keyframes mymove3b {
+            to {top: -400px;}
+            from {top: 370px;}
+        }
+
+        @keyframes mymove4 {
+            from {top: -210px;}
+            to {top: 526px;}
+        }
+
+        @keyframes mymove4b {
+            to {top: -210px;}
+            from {top: 526px;}
+        }
+
+        @keyframes mymove5 {
+            from {left: -600px;}
+            to {left: 28px;}
+        }
+
+        @keyframes mymove5b {
+            to {left: -600px;}
+            from {left: 28px;}
+        }
+
+        @keyframes mymove6 {
+            from {left: -600px;}
+            to {left: 28px;}
+        }
+
+        @keyframes mymove6b {
+            to {left: -600px;}
+            from {left: -28px;}
+        }
+
+        @keyframes mymove7 {
+            from {left: -600px;}
+            to {left: 26px;}
+        }
+
+        @keyframes mymove7b {
+            to {left: -600px;}
+            from {left: -26px;}
+        }
+
+        @keyframes mymove8 {
+            from {right: -600px;}
+            to {right: 34px;}
+        }
+
+        @keyframes mymove8b {
+            to {right: -600px;}
+            from {right: 34px;}
+        }
+
+        @keyframes mymove9 {
+            from {left: -600px;}
+            to {left: 45px;}
+        }
+
+        @keyframes mymove9b {
+            to {left: -600px;}
+            from {left: -45px;}
+        }
+
+        @keyframes mymove10 {
+            from {right: -600px;}
+            to {right: 42px;}
+        }
+
+        @keyframes mymove10b {
+            to {right: -600px;}
+            from {right: 42px;}
+        }
+
+        @keyframes mymove11 {
+            from {opacity: 0%;}
+            to {opacity: 100%;}
+        }
+
+        @keyframes mymove11b {
+            to {opacity: 0%;}
+            from {opacity: 100%;}
+        }
+
+
+        #main {
+            width: 600px;
+            height: 800px;
+            background: #000000;
+            border: none;
+            margin: auto;
+            background-image: url("material/basepng");
+            position: relative;
+            animation-name: mymove11;
+            animation-duration: 2.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            overflow: hidden;
+        }
+
+        #foto1 {
+            width: 400px;
+            weight: 400px;
+            position: absolute;
+            top: 100px;
+            left: 106px;
+            animation-name: mymove1;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            transition: left 1s;
+            z-index: 4;
+        }
+
+        #foto1:hover,
+        #foto3:hover {
+            left: 0px;
+        }
+
+        #foto2 {
+            width: 400px;
+            weight: 400px;
+            position: absolute;
+            top: 300px;
+            left: 104px;
+            animation-name: mymove2;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            transition: left 1s;
+            z-index: 3;
+        }
+
+        #foto2:hover,
+        #foto4:hover {
+            left: 200px;
+        }
+
+        #foto3 {
+            margin-bottom: 100px;
+            margin-left: 221px;
+            margin-top: 19px;
+            width: 391px;
+            left: 106px;
+            animation-name: mymove3;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            transition: left 1s;
+            z-index: 2;
+        }
+
+        #foto4 {
+            margin-top: -400px;
+            width: 177px;
+            margin-left: 431px;
+            animation-name: mymove4;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            transition: left 1s;
+            z-index: 1;
+        }
+
+        #texto1{
+            color:white;
+            font-family: eternal;
+            position: absolute;
+            top: 69px;
+            left: 28px;
+            font-size: 90px;
+            transition: left 1s;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            animation-name: mymove5;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        #texto1:hover{
+            color: blueviolet;
+        }
+
+        #texto2 {
+    position: absolute;
+    color: white;
+    font-family: eternal;
+    top: 10px; 
+    right: 10px; 
+    font-size: 30px;
+    transition: right 1s;
+    animation-name: mymove8;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    margin: auto;
+}
+
+
+        #texto2:hover{
+            color: rgb(0, 255, 38);
+        }
+        #texto3{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 260px;
+        
+            font-size: 20px;
+            transition: left 1s;
+            animation-name: mymove6;
+            animation-duration: 0.8s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            }
+            #texto3:hover{
+                color:aqua;
+            }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        #bt_off,
+        #bt_on {
+            font-family: Galano;
+            color: black;
+            text-decoration: none;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        #bt_on{
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        #bt_off:hover,
+        #bt_on:hover {
+            background: #cbcbcb;
+        }
+        
+    </style>
+
+
+    <script>
+        function esconder() {
+            document.getElementById("foto1").style.animation = 'mymove1b 0.5s forwards';
+            document.getElementById("foto2").style.animation = 'mymove2b 1s forwards';
+            document.getElementById("foto3").style.animation = 'mymove3b 1.5s forwards';
+            document.getElementById("foto4").style.animation = 'mymove4b 2s forwards';
+
+            document.getElementById("texto1").style.animation='mymove5b 0.5s forwards';
+            document.getElementById("texto2").style.animation='mymove6b 1s forwards';
+            document.getElementById("texto3").style.animation='mymove7b 1.5s forwards';
+            document.getElementById("texto4").style.animation='mymove8b 2s forwards';
+            document.getElementById("texto5").style.animation='mymove9b 2s forwards';
+            document.getElementById("texto6").style.animation='mymove10b 2s forwards';
+
+            document.getElementById("main").style.animation='mymove11b 2.5s forwards';
+
+            document.getElementById("bt_on").style.color='black';
+            document.getElementById("bt_off").style.color='grey';
+
+            document.getElementById('bt_on').style.pointerEvents = 'auto';
+            document.getElementById('bt_on').style.opacity = '1';
+
+            document.getElementById('bt_0ff').style.pointerEvents = 'none';
+            document.getElementById('bt_off').style.opacity = '0.1';
+        }
+
+        function aparecer() {
+            document.getElementById("foto1").style.animation = 'mymove1 2s forwards';
+            document.getElementById("foto2").style.animation = 'mymove2 1.5s forwards';
+            document.getElementById("foto3").style.animation = 'mymove3 1s forwards';
+            document.getElementById("foto4").style.animation = 'mymove4 0.5s forwards';
+        
+            document.getElementById("texto1").style.animation='mymove5 0.5s forwards';
+            document.getElementById("texto2").style.animation='mymove6 1s forwards';
+            document.getElementById("texto3").style.animation='mymove7 1.5s forwards';
+            document.getElementById("texto4").style.animation='mymove8 2s forwards';
+            document.getElementById("texto5").style.animation='mymove9 2s forwards';
+            document.getElementById("texto6").style.animation='mymove10 2s forwards';
+
+            document.getElementById("main").style.animation='mymove11 2.5s forwards';
+
+            document.getElementById("bt_on").style.color='grey';
+            document.getElementById("bt_off").style.color='black';
+
+            document.getElementById('bt_0ff').style.pointerEvents = 'none';
+            document.getElementById('bt_off').style.opacity = '0.1';
+
+            document.getElementById('bt_on').style.pointerEvents = 'auto';
+            document.getElementById('bt_on').style.opacity = '1';
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="main">
+        <img src="Fotos/recurso 3unicornio.png" alt="mundo1" id="foto1">
+        <img src="Fotos/recurso 4unicornio.png" alt="mundo2" id="foto2">
+        <img src="Fotos/recurso 5unicornio.png" alt="red" id="foto3">
+        <img src="fotos/recurso 6unicornio.png" alt="chino" id="foto4">
+        <div id="texto1">SYNCRONICITE</div>
+        <div id="texto2">11:11</div>
+        <div id="texto3">Timing Diving</div>
+        
+</body>
+
+</html>
